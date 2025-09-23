@@ -7,7 +7,7 @@ import java.util.List;
 @RequestScoped
 public class InicioBean {
     
-    private final productoService servicio = new productoService();
+    private final programService servicio = new programService();
 
     public List<productoEntity> getProductos() {
         return servicio.listar();
