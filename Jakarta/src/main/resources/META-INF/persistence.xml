@@ -9,18 +9,14 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.ejemplo.modelo.Usuario</class>
 
-        <properties>
-            <!-- Configuración de conexión -->
-            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/porfolio"/>
-            <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="123456789"/>
-
-            <!-- Configuración de Hibernate -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-        </properties>
+<properties>
+    <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+    <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/portfolio"/>
+    <property name="jakarta.persistence.jdbc.user" value="root"/>
+    <property name="jakarta.persistence.jdbc.password" value="123456789"/>
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+    <property name="hibernate.hbm2ddl.auto" value="update"/>
+    <property name="hibernate.show_sql" value="true"/>
+</properties>
     </persistence-unit>
 </persistence>

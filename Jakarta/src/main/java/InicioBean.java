@@ -1,22 +1,16 @@
+import Entity.productoEntity;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
+import java.util.List;
 
 @Named("inicioBean")
 @RequestScoped
 public class InicioBean {
-    private String nombre;
-    private String mensaje;
+    
+    private final productoService servicio = new productoService();
 
-    public void saludar() {
-        if (nombre == null || nombre.isEmpty()) {
-            mensaje = "Por favor, ingrese un nombre.";
-        } else {
-            mensaje = "Hola, " + nombre + "!";
-        }
+    public List<productoEntity> getProductos() {
+        return servicio.listar();
     }
-
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-    public String getMensaje() { return mensaje; }
     
 }
